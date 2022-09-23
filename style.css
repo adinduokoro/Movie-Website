@@ -72,6 +72,7 @@ body{
   align-items: center;
   justify-content: space-around;
   position: relative;
+  transition: 1s ease all;
 }
 
 .toggle-icon{
@@ -148,12 +149,15 @@ body{
 
 .movie-list-wrapper{
   position: relative;
+  overflow: hidden;
 }
 
 .movie-list{
   display: flex;
   align-items: center;
   height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
 }
 
 .movie-list-item{
@@ -178,6 +182,7 @@ body{
   width: 270px;
   height: 200px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .movie-list-item-title{
@@ -228,4 +233,40 @@ body{
   color: lightgray;
   opacity: .5;
   cursor: pointer;
+}
+
+.container.active{
+  background-color: white;
+}
+
+.movie-list-title.active{
+  color:black;
+}
+
+.navbar-container.active{
+  background-color: white;
+  color: black;
+}
+
+.sidebar.active{
+  background-color: white;
+}
+
+.left-menu-icon.active{
+  color: black;
+}
+
+.toggle.active{
+  background-color: black;
+}
+
+.toggle-ball.active{
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 940px){
+  .menu-container{
+    display: none;
+  }
 }
